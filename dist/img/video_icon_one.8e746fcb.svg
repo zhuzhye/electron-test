@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>船位监控</title>
+    <g id="视觉稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="视频监控-实时视频" transform="translate(-948.000000, -86.000000)">
+            <g id="编组-37" transform="translate(948.000000, 86.000000)">
+                <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <rect id="矩形" stroke="#041E3E" stroke-width="1.5" stroke-linejoin="round" x="4.5" y="4.5" width="15" height="15"></rect>
+                <rect id="矩形" stroke="#041E3E" stroke-width="1.5" fill="#041E3E" stroke-linejoin="round" x="7.1328914" y="7.1328914" width="9.7342172" height="9.7342172"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

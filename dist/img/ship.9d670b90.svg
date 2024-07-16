@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>MAPPOl</title>
+    <g id="自定义" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="主页-个人中心" transform="translate(-1040.000000, -477.000000)">
+            <g id="MAPPOl" transform="translate(1036.649450, 473.682684)">
+                <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <rect id="矩形备份-3" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" x="4.72020013" y="4.73614493" width="14.5595997" height="14.5277101" rx="1"></rect>
+                <g id="编组-2" transform="translate(7.556138, 8.233732)" stroke="#000000" stroke-width="1.25">
+                    <line x1="8.5" y1="1.25" x2="2.5" y2="1.25" id="直线-2备份-14" stroke-linejoin="round"></line>
+                    <rect id="矩形" x="0" y="0" width="2.5" height="2.5"></rect>
+                </g>
+                <g id="编组-2备份" transform="translate(11.806138, 14.516268) scale(-1, -1) translate(-11.806138, -14.516268) translate(7.556138, 13.266268)" stroke="#000000" stroke-width="1.25">
+                    <line x1="8.5" y1="1.25" x2="2.5" y2="1.25" id="直线-2备份-14" stroke-linejoin="round"></line>
+                    <rect id="矩形" x="0" y="0" width="2.5" height="2.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

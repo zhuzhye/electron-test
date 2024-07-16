@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>船位监控</title>
+    <g id="自定义组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="主页-个人中心备份-4" transform="translate(-1071.000000, -495.000000)">
+            <g id="船位监控" transform="translate(1067.649450, 491.682684)">
+                <rect id="矩形" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <rect id="矩形备份-62" stroke="#000000" stroke-width="1.5" x="4.41118424" y="6.56257239" width="15.1752148" height="12.9400512" rx="1"></rect>
+                <line x1="19.586399" y1="11.0243701" x2="4.41118424" y2="11.0243701" id="路径-41" stroke="#000000" stroke-width="1.5"></line>
+                <line x1="7.93188467" y1="3.68447626" x2="7.93188467" y2="6.8806471" id="路径-41备份-5" stroke="#000000" stroke-width="1.5"></line>
+                <line x1="16.116414" y1="3.68447626" x2="16.116414" y2="6.8806471" id="路径-41备份-6" stroke="#000000" stroke-width="1.5"></line>
+            </g>
+        </g>
+    </g>
+</svg>
