@@ -1,7 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
 const path = require("node:path");
-require("./server");
+// require("./server");
 // var liveServer = path.join(__dirname, "relative/path/to/live-server");
 function createWindow() {
   // Create the browser window.
@@ -10,10 +10,10 @@ function createWindow() {
     height: 600,
     webPreferences: {
       // sandbox: false,
-      // nodeIntegration: true,
+      nodeIntegration: true,
       // contextIsolation:false,//关闭上下隔离
       // webSecurity: false,
-      // preload: path.join(__dirname, "./preload.js"),
+      preload: path.resolve(__dirname, "./preload.js"),
     },
   });
   // liveServer.start({
@@ -26,10 +26,11 @@ function createWindow() {
   //   logLevel: 2, // 日志级别 0-2
   // });
   // and load the index.html of the app.
-  mainWindow.loadURL("http://localhost:3000");
+  // mainWindow.loadURL("http://localhost:8088");
 
   // Menu.setApplicationMenu(null);
   // mainWindow.loadURL(`file://${path.join(__dirname, "./dist")}/index.html`); // 新增
+  mainWindow.loadURL(`${path.join(__dirname, "./dist")}/index.html`); // 新增
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

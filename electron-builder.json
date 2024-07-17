@@ -1,15 +1,8 @@
 {
   "productName": "服务监控",
-  "files": [
-    "./server.js",
-    "./main.js",
-    "package.json",
-    "preload.js"
-  ],
-  "extraFiles": [
-    "./videos",
-    "./cvideo"
-  ],
+  "files": ["./server.js", "./main.js", "package.json", "preload.js"],
+  "extraFiles": ["./videos", "./cvideo"],
+  "asar": false,
   "extraResources": [
     {
       "from": "dist/",
