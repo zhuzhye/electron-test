@@ -1,44 +1,70 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain, Menu } = require("electron");
 const path = require("node:path");
+const fs = require("fs");
+const getFileTree = require("./test");
 // require("./server");
 // var liveServer = path.join(__dirname, "relative/path/to/live-server");
+function writeFile(event, data) {
+  console.log(data);
+  const res = getFileTree(path.join(__dirname, "./dist"));
+  console.log(res);
+  return res;
+}
+function readFile() {
+  const res = fs
+    .readFileSync("D:/学习/学习计划/electronTest/hello.txt")
+    .toString();
+  console.log(res);
+  return res;
+}
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
     webPreferences: {
       // sandbox: false,
-      nodeIntegration: true,
+      // nodeIntegration: true,
       // contextIsolation:false,//关闭上下隔离
       // webSecurity: false,
       preload: path.resolve(__dirname, "./preload.js"),
     },
   });
-  // liveServer.start({
-  //   port: 8888, // 你想要的端口号
-  //   host: "localhost",
-  //   root: "./dist",
-  //   open: false, // 是否自动打开浏览器
-  //   file: "index.html", // 启动时打开的文件
-  //   wait: 1000, // 文件更改时等待时间(ms)
-  //   logLevel: 2, // 日志级别 0-2
-  // });
-  // and load the index.html of the app.
-  // mainWindow.loadURL("http://localhost:8088");
+  ipcMain.on("file-save", writeFile);
+  ipcMain.handle("file-read", readFile);
+  ipcMain.handle("file-tree", writeFile);
+
+  // mainWindow.loadURL("http://localhost:10000");
 
   // Menu.setApplicationMenu(null);
-  // mainWindow.loadURL(`file://${path.join(__dirname, "./dist")}/index.html`); // 新增
-  mainWindow.loadURL(`${path.join(__dirname, "./dist")}/index.html`); // 新增
-
-  // Open the DevTools.
+  mainWindow.loadURL(`file://${path.join(__dirname, "./dist")}/index.html`);
+  // mainWindow.loadURL(`${path.join(__dirname, "./dist")}/index.html`);
   mainWindow.webContents.openDevTools();
 }
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
+const template = [
+  {
+    label: "系统",
+    submenu: [
+      {
+        label: "更新",
+        click: () => {
+          // 发送事件到渲染进程
+          // mainWindow.webContents.send("menu-action", "new-file");
+        },
+      },
+      {
+        label: "退出",
+        click: () => {
+          app.quit();
+        },
+      },
+    ],
+  },
+];
+//设置菜单
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);
 app.whenReady().then(() => {
   createWindow();
 

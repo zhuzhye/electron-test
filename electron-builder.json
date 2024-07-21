@@ -1,8 +1,17 @@
 {
   "productName": "服务监控",
-  "files": ["./server.js", "./main.js", "package.json", "preload.js"],
-  "extraFiles": ["./videos", "./cvideo"],
-  "asar": false,
+  "files": [
+    "./server.js",
+    "./main.js",
+    "package.json",
+    "preload.js",
+    "renderer.js",
+    "./test.js"
+  ],
+  "asar": true,
+  "compression": "maximum",
+  "copyright": "浙江英特讯信息科技有限公司 © 2024",
+  "appId": "com.zjytx",
   "extraResources": [
     {
       "from": "dist/",
@@ -11,6 +20,14 @@
     }
   ],
   "directories": {
-    "output": "./build"
+    "output": "./app"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "perMachine": true,
+    "deleteAppDataOnUninstall": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
   }
 }

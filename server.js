@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-const PORT = 8088;
+const PORT = 10000;
 
 // 设置静态文件夹
 app.use(express.static(path.join(process.resourcesPath, "app", "dist")));
